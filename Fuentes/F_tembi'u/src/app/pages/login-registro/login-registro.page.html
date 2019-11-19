@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title text-capitalize>Registrar cuenta</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div text-center>
+        <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+                <img src="../assets/comidas.png">
+            </ion-slide>
+            <ion-slide>
+                <img src="../assets/comidas.png">
+            </ion-slide>
+            <ion-slide>
+                <img src="../assets/comidas.png">
+            </ion-slide>
+        </ion-slides>
+
+    </div>
+
+    <form #formulario="ngForm" (ngSubmit)="onSubmitTemplate()">
+
+        <ion-list>
+
+
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" name="email"
+                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" [(ngModel)]="email" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input type="password" name="password" [(ngModel)]="password" required>
+                </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating"> Confirmar Contraseña</ion-label>
+                <ion-input type="password" name="password2" [(ngModel)]="password2" required>
+                </ion-input>
+            </ion-item>
+
+
+        </ion-list>
+
+        <ion-button expand="full" type="submit" [disabled]="formulario.invalid">
+            Registrar
+        </ion-button>
+        <ion-button expand="full" color="tertiary" routerLink="/presentacion">
+            Volver
+        </ion-button>
+    </form>
+</ion-content>

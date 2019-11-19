@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title text-center>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div text-center>
+        <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+                <img src="../assets/desayuno1.png"  >
+            </ion-slide>
+            <ion-slide>
+                <img src="../assets/comidas.png"  >
+            </ion-slide>
+            <ion-slide>
+                <img src="../assets/comidas2.png"  >
+            </ion-slide>
+          </ion-slides>
+         
+    </div>
+      
+  <ion-list>
+            <ion-item>
+                      <ion-label position="floating">Correo</ion-label>
+                      <ion-input type="email" [(ngModel)]="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+  </ion-list>
+  <ion-button expand="full" 
+              (click)="ingresar()"
+               >
+                Ingresar
+  </ion-button>
+  <ion-button expand="full" 
+             routerLink="/presentacion"
+   >
+    Volver
+   </ion-button>
+
+
+</ion-content>

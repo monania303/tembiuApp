@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title> Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div text-center>
+        <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+                <img src="../assets/desayuno1.png"  >
+            </ion-slide>
+            <ion-slide>
+                <img src="../assets/comidas.png"  >
+            </ion-slide>
+            <ion-slide>
+                <img src="../assets/comidas2.png"  >
+            </ion-slide>
+          </ion-slides>
+         
+    </div>
+    
+   
+</ion-content>
+
+<ion-footer>
+    <ion-button expand="block" routerLink="/login" color="tertiary">Iniciar Session</ion-button> 
+    <ion-button expand="full" routerLink="/login-registro" color="tertiary">Crear Cuenta</ion-button> 
+
+  
+</ion-footer>
